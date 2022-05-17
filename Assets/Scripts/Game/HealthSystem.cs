@@ -36,6 +36,7 @@ public class HealthSystem : MonoBehaviour
         if(healthCount<1)
         {
             Debug.Log("You lost");
+            
             //Call some reset values and stop the game from the manager
         }
     }
