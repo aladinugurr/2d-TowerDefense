@@ -98,9 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc4e8f304a61c148a1572a1c30dcd8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 3
   attackPower: 1
   moveSpeed: 0.6
+  countForLevel: 0
   animator: {fileID: 1928362795729627625}
   attackInterval: 1.5
 --- !u!61 &5417966728447072430

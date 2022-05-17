@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShootItem : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class ShootItem : MonoBehaviour
     //damage
     public int damage;
     //speed
+    
     public float flySpeed,rotateSpeed;
 
     //METHODS
@@ -24,17 +26,22 @@ public class ShootItem : MonoBehaviour
             Debug.Log("Shot the enemy");
             collision.GetComponent<Enemy>().LoseHealth();
             Destroy(gameObject);
+            
+            
         }
+        
         if (collision.tag == "Out")
         {            
             Destroy(gameObject);
         }
     }
+    
     //Handle rotation and flying
     void Update()
     {
         Rotate();
         FlyForward();
+      
     }
     void Rotate()
     {

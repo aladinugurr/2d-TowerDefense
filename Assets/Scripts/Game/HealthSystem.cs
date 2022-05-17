@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+
 public class HealthSystem : MonoBehaviour
 {    
+    
     //The UI text for the health count
     public Text txt_healthCount;
     //The default value of the health count (used for init)
@@ -36,8 +38,9 @@ public class HealthSystem : MonoBehaviour
         if(healthCount<1)
         {
             Debug.Log("You lost");
-            
+           
             //Call some reset values and stop the game from the manager
+            
         }
     }
 }
