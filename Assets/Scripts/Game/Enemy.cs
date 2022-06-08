@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
     //Health,AttackPower,MoveSpeed
     public int health,attackPower;
     public float moveSpeed;
-    public int countForLevel;
+  
 
     public Animator animator;
     public float attackInterval;
@@ -48,10 +48,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-     void checkLevel()
-    {
-        countForLevel++;
-    }
+  
     
      
     
@@ -68,13 +65,9 @@ public class Enemy : MonoBehaviour
         {
             
             Destroy(gameObject);
-            checkLevel();
-            Debug.Log(countForLevel);
-           
-            if (countForLevel == 5)
-            {
-                SceneManager.LoadScene("secondScene");
-            }
+
+            ScoreScript.scoreValue += 1;
+
         }
     }
 

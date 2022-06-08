@@ -14,6 +14,7 @@ public class ShootItem : MonoBehaviour
 
     //METHODS
     //Init
+  
     public void Init(int dmg)
     {
         damage = dmg;
@@ -23,16 +24,25 @@ public class ShootItem : MonoBehaviour
     {
         if(collision.tag=="Enemy")
         {
+            
             Debug.Log("Shot the enemy");
             collision.GetComponent<Enemy>().LoseHealth();
             Destroy(gameObject);
             
             
+            
         }
         
+      
         if (collision.tag == "Out")
-        {            
+        {
+            
             Destroy(gameObject);
+
+
+           
+
+            
         }
     }
     
